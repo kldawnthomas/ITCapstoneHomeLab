@@ -2,7 +2,7 @@
 HomeNode - the all-in-one home lab infrastructure designed for cloud storage, secure remote access but also an optional easy to use home server dashboard. Everything can be implemented via a docker-compose.yaml file(s). 
 
 - **VMware** - Hypervisor (for advanced virtualization needs)
-- **Ubuntu Server** (host OS)
+- **Ubuntu Server** - Host OS
 - **Portainer** - Docker Management GUI
 - **Nextcloud** - Personal Cloud Storage
 - **Tailscale** - Secure remote access
