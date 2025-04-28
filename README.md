@@ -11,7 +11,7 @@ HomeNode - the all-in-one home lab infrastructure designed for cloud storage, se
 
 ## Prerequisities
 
-- VMware ESXi for virtualization (latest version of VMware Workstation Pro - free for personal use)
+- VMware ESXi for virtualization (latest version of [VMware Workstation Pro]([url](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion)) - free for personal use) 
 - Ubuntu Server 22.04+
 - Docker & Docker Compose
 - On mobile device from device app store:
