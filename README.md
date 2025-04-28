@@ -18,16 +18,6 @@ HomeNode - the all-in-one home lab infrastructure designed for cloud storage, se
     - Tailscale
     - NextCloud
 
-## Quick Start
-1. Clone the repo: 
-'''bash 
-git clone https://github.com/kldthomas/ITCapstoneHomeLab.git
-cd home-lab
-cp .env.example .env
-
-2. Update the .env file with preferences
-3. Start the stack: 
-docker-compose up -d
 
 # Services 
 
