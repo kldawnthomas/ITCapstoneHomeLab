@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  portainer:
+    image: portainer/portainer-ce
+    container_name: portainer
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./portainer:/data
+    restart: unless-stopped
+
+  nextcloud:
+    image: linuxserver/nextcloud
+    container_name: nextcloud
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TZ}
+    volumes:
+      - ./nextcloud:/config
+      - ./nextcloud/data:/data
+    ports:
+      - "8080:443"
+    restart: unless-stopped
+
+  tailscale:
+    image: tailscale/tailscale:latest
+    container_name: tailscale
+    restart: unless-stopped
+    network_mode: "host"
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+      - NET_RAW
+    volumes:
+      - tailscale_data:/var/lib/tailscale
+      - /dev/net/tun:/dev/net/tun
+    environment:
+      - TS_AUTH= #personal authentication key provided through Tailscale Settings Tab under 'Personal Settings and Keys' Make sure to set key to 'Reusable'
+      - TS_STATE_DIR=/var/lib/tailscale
+    command: tailscaled
+
+volumes:
+    # - /var/lib/tailscale:/var/lib/tailscale #optional
+    # - /dev/net/tun:/dev/net/tun #optional 
+  tailscale_data:
+  
+
+# The following are optional additions. Remove # before copy/pasting
+#  homeassistant:
+#   image: ghcr.io/home-assistant/home-assistant:stable
+#   container_name: homeassistant
+#   volumes:
+#     - ./homeassistant:/config
+#   environment:
+#     - TZ=${TZ}
+#   privileged: true
+#   restart: unless-stopped
+#   network_mode: host
+
