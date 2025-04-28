@@ -12,8 +12,8 @@ HomeNode - the all-in-one home lab infrastructure designed for cloud storage, se
 ## Prerequisities
 
 - VMware ESXi for virtualization (latest version of [VMware Workstation Pro]([url](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion)) - free for personal use) https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
-- Ubuntu Server 22.04+
-- Docker & Docker Compose
+- Ubuntu Server 22.04+ - https://ubuntu.com/download/server
+- Docker & Docker Compose - https://docs.docker.com/engine/install/ubuntu/
 - On mobile device from device app store:
     - Tailscale
     - NextCloud
@@ -38,5 +38,5 @@ Service  |  URL/Access
 3. Tailscale | Runs as VPN - mild configuration needed 
 4. *Optional* Home Assistant | http://ip-address:8123 or http://localhost:8123
 
-*Each service has its own folder for volume persistence or custom configuration (where needed)*  
+*Each service has its own directory for volume persistence or custom configuration (where needed)*  
 *Ensure there are no overlapping ports for that will cause conflicts in performance* 
