@@ -15,7 +15,7 @@ HomeNode - the all-in-one home lab infrastructure designed for cloud storage, se
 - Ubuntu Server 22.04+
 - Docker & Docker Compose
 - On mobile device from device app store:
-    - Wireguard
+    - Tailscale
     - NextCloud
 
 ## Quick Start
